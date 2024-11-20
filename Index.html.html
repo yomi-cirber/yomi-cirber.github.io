@@ -1,0 +1,100 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para mi princesa Nasheiry</title>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+}
+
+#buttonContainer {
+    position: relative;
+    text-align: center;
+}
+
+#title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: font-size 0.3s ease;
+}
+
+.green {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.red {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+.green:hover {
+    transform: scale(1.1);
+}
+
+.red:active {
+    animation: grow 1s infinite alternate;
+}
+
+@keyframes grow {
+    to {
+        font-size: 1000px;
+    }
+}
+
+#gif {
+    position: absolute;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 325px;
+}
+</style>
+</head>
+<body>
+
+<div id="title">¿Me Perdonas mi amorrr?</div>
+
+<div id="buttonContainer">
+    <img id="gif" src="file:///C:/Users/josme/Downloads/WhatsApp%20Image%202024-11-19%20at%208.12.53%20PM.jpeg" alt="Corazón latiendo">
+    <button id="yesButton" class="button green">Si</button>
+    <button id="noButton" class="button red">No</button>
+</div>
+
+<script>
+    document.getElementById("yesButton").addEventListener("click", function() {
+        alert("Te amo mi Nashy preciosa");
+    });
+    
+    document.getElementById("noButton").addEventListener("click", function() {
+        var currentSize = parseInt(window.getComputedStyle(document.getElementById("yesButton")).fontSize);
+        var newSize = currentSize + 30;
+        if (newSize <= 1000) {
+            document.getElementById("yesButton").style.fontSize = newSize + "px";
+            var popup = window.open("", "_blank", "width=200, height=200");
+            popup.document.write("<img src='https://media.giphy.com/media/TgZJIdfAkv9Xe/giphy.gif' alt='corazon latiendo'>");
+            popup.document.write("<h1>Te amo</h1>");
+        }
+    });
+</script>
+
+</body>
+</html>
