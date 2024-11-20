@@ -74,7 +74,7 @@ body {
 <div id="title">¿Me Perdonas mi amorrr?</div>
 
 <div id="buttonContainer">
-    <img id="gif" src="https://raw.githubusercontent.com/yomi-cirber/yomi-cirber.github.io/refs/heads/main/WhatsApp%20Image%202024-11-19%20at%208.12.53%20PM.jpeg">
+    <img id="gif" src="file:///C:/Users/josme/Desktop/WhatsApp%20Image%202024-11-19%20at%208.12.53%20PM.jpeg" alt="Corazón latiendo">
     <button id="yesButton" class="button green">Si</button>
     <button id="noButton" class="button red">No</button>
 </div>
@@ -89,7 +89,9 @@ body {
         var newSize = currentSize + 30;
         if (newSize <= 1000) {
             document.getElementById("yesButton").style.fontSize = newSize + "px";
-            
+            var popup = window.open("", "_blank", "width=200, height=200");
+            popup.document.write("<img src='file:///C:/Users/josme/Desktop/WhatsApp%20Image%202024-11-19%20at%208.12.53%20PM.jpeg' alt='corazon latiendo'>");
+            popup.document.write("<h1>Te amo</h1>");
         }
     });
 </script>
